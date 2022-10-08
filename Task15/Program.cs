@@ -3,9 +3,10 @@
 Console.Clear();
 Console.Write("Введитие цифру: ");
 int n = Convert.ToInt32(Console.ReadLine());
-if (n > 5 && n < 8)
-    Console.WriteLine("Это выходной день!");
-if (n >= 1 && n <= 5 )
-    Console.WriteLine("Это будний день!");
+while (n < 1 || n > 7)
+    n = Convert.ToInt32(Console.ReadLine());
+
+if (n > 5)
+    Console.WriteLine("Выходной");
 else
-    Console.WriteLine("Ошиблись, попробуйте сначала");
+    Console.WriteLine("Будни");
