@@ -1,13 +1,15 @@
-﻿// Task 13
+﻿//Напишите программу, которая выводит третью цифру
+// заданного числа или сообщает, что третьей цифры нет.
+
 Console.Clear();
-Console.WriteLine("Введите число: ");
+Console.Write("Введите число: ");
 int n = Convert.ToInt32(Console.ReadLine());
-int a = 0;     
+n = Math.Abs(n);
 if (n < 100)
-    {
-        Console.Write("Третьей цифры нет");
-        n = Convert.ToInt32(Console.ReadLine());
-    }
-if (n > 1000) 
-    a = n / 10;    
-Console.WriteLine($"Третья цифра: {a % 10}");
+Console.WriteLine("Третьей цифры нет");
+else
+{
+while (n > 1000)
+n = n / 10;
+Console.WriteLine(n % 10);
+}
